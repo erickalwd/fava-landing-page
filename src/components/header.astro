@@ -2,6 +2,8 @@
 import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import favaImage from "~/assets/fava.png";
+import { Image } from "astro:assets";
 
 const navItems: Array<NavItem> = [
   { title: "Features", url: "#features" },
@@ -16,7 +18,11 @@ const navItems: Array<NavItem> = [
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <h1 class="sr-only">Fava</h1>
-    <img src="src/assets/fava.png" width="180" height="180"></img>
+    <Image
+      width={120}
+      src={favaImage}
+      alt="The ridged surface of the moon"
+    />
     <!-- <Icon name="logomark" class="h-10" />
     <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
   </a>
